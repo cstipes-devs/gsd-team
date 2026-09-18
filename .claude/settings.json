@@ -1,0 +1,40 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "ENABLE_TOOL_SEARCH": "auto:5",
+    "MAX_MCP_OUTPUT_TOKENS": "50000",
+    "ENABLE_PROMPT_CACHING_1H": "1"
+  },
+  "hooks": {
+    "TaskCreated": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/task_created_format_check.py\""
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/task_completed_verify_gate.py\""
+          }
+        ]
+      }
+    ],
+    "TeammateIdle": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/teammate_idle_workcheck.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

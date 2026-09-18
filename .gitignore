@@ -1,0 +1,47 @@
+# Personal, per-machine Claude Code settings
+.claude/settings.local.json
+.claude/logs/
+
+# Terraform — state contains plaintext secrets, never commit it
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+*.auto.tfvars
+!example.auto.tfvars
+
+# Node
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+.npm/
+
+# Go
+*.test
+*.out
+vendor/
+
+# Swift / Xcode
+.build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.swiftpm/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
