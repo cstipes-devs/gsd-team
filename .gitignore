@@ -49,3 +49,8 @@ Thumbs.db
 # Python
 __pycache__/
 *.pyc
+
+# Feature specs are working output, not part of the template.
+# The empty directory ships so the workflow has somewhere to write.
+.claude/specs/*
+!.claude/specs/.gitkeep
