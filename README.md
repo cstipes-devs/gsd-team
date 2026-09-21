@@ -269,6 +269,17 @@ Useful here: `context7`, `feature-dev`, `frontend-design`, `security-guidance`, 
 - **Long builds need a machine that stays awake.** A sleeping laptop kills in-flight agents. `caffeinate -dimsu` on macOS.
 - **Verification is only as honest as the agents are.** The gate makes faking deliberate rather than accidental, which is the realistic goal — not a proof.
 
+---
+
+## Compatibility
+
+Built for **Claude Code**, which supplies the task lifecycle events the verification gate binds to.
+
+A **[`copilot-cli`](../../tree/copilot-cli) branch** ports the team to GitHub Copilot CLI. The 13 agents, the rules, and the skills transfer directly; the gate is reconstructed on Copilot's `preToolUse` hook, which can deny a tool call. Three capabilities have no equivalent and are documented rather than faked: idle nudging, inter-agent messaging, and shared task state. See [docs/COPILOT-CLI.md](docs/COPILOT-CLI.md).
+
+Other assistants (Cursor, Codex, Continue) can reuse `.claude/rules/` and `.claude/skills/` as plain markdown standards — four test tiers, per-stack idioms, AWS security guidelines — but not the orchestration, which depends on hook events.
+
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

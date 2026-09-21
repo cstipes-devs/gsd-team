@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "disableAllHooks": false,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "matcher": "[A-Za-z_]*([Ww]rite|[Ee]dit|[Cc]reate|[Pp]atch|str_replace|[Aa]pply)[A-Za-z_]*",
+        "command": "python3 \"${COPILOT_PROJECT_DIR:-.}/scripts/copilot_hooks/pre_tool_use_gate.py\"",
+        "timeoutSec": 15
+      }
+    ]
+  }
+}
