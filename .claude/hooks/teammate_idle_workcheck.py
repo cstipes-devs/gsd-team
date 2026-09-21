@@ -44,6 +44,7 @@ def agent_roles(name):
         "requirements-analyst": ["planning"],
         "diagram-author": ["planning"],
         "tradeoff-analyst": ["planning"],
+        "ux-designer": ["design", "planning"],
     }
     return mapping.get((name or "").strip().lower(), [])
 

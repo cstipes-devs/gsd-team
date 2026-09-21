@@ -12,6 +12,7 @@ A spec-driven multi-agent development team for Claude Code, organized into three
 | `requirements-analyst` | `spec.md` — requirements and acceptance criteria |
 | `diagram-author` | `diagrams/` — Mermaid C4, sequence, ER |
 | `tradeoff-analyst` | `adr/` — decision records |
+| `ux-designer` | `mockups/` — interactive prototypes, wireframes |
 
 **Execution** — builds it. Each agent owns a disjoint set of files, which is what makes parallel work safe.
 

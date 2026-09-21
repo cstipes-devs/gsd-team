@@ -24,7 +24,7 @@ Valid role tags:
 
 | Group | Tags |
 |---|---|
-| Planning | `[planning]` |
+| Planning | `[planning]` `[design]` |
 | Execution | `[go]` `[node]` `[react]` `[swift]` `[data]` |
 | Deployment | `[terraform]` `[aws]` |
 | Review | `[review]` |

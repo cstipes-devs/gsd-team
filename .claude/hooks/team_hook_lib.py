@@ -18,6 +18,7 @@ VERIFIED_ROOT = os.path.expanduser("~/.claude/logs/verified")
 # .claude/rules/agent-team-protocol.md.
 ROLE_TAGS = (
     "planning",
+    "design",
     "go",
     "node",
     "react",

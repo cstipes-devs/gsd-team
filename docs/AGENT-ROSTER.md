@@ -10,6 +10,7 @@ Twelve agents in four groups. Who to call, and when.
 | `requirements-analyst` | Opus | `spec.md` | Requirements are vague, contested, or exist only in someone's head. |
 | `diagram-author` | Sonnet | `diagrams/` | The architecture is stable enough to draw, or a diagram has drifted. |
 | `tradeoff-analyst` | Opus | `adr/` | A decision has real alternatives and reversing it later would be expensive. |
+| `ux-designer` | Opus | `mockups/`, `wireframes/` | A feature has screens whose layout or flow is contested, or a tap-count/friction budget needs proving before code commits to it. Role tag `[design]`. |
 
 **Never** write application code, tests, or Terraform.
 
